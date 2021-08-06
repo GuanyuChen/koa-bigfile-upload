@@ -1,0 +1,25 @@
+{
+  "name": "koa-bigfile-upload",
+  "version": "1.0.0",
+  "description": "koa-body大文件上传",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuanyuChen/koa-bigfile-upload.git"
+  },
+  "dependencies": {
+    "koa":"2.13.1",
+    "koa-body":"4.2.0",
+    "koa-router":"10.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GuanyuChen/koa-bigfile-upload/issues"
+  },
+  "homepage": "https://github.com/GuanyuChen/koa-bigfile-upload#readme"
+}
