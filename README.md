@@ -1,2 +1,5 @@
 # koa-bigfile-upload
-koa-body大文件上传
+
+## koa-body 分析
+
+`requestbody` -> `formy(ctx, opts.formidable)` -> `formidable.IncomingForm`
