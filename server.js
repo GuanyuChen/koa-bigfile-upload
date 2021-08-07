@@ -10,14 +10,18 @@ const app = new Koa();
 const router = new Router({ prefix: "/api" });
 
 app.use(Static(path.join(__dirname, "/static")));
-app.use(KoaBody({ multipart: true }));
+app.use(
+	KoaBody({ multipart: true, formidable: { maxFileSize: 500 * 1024 * 1024 } })
+);
 
 router.post("/file-upload", async (ctx) => {
 	try {
-		await fileLib.saveFile(ctx.request.files.file);
+		const file = ctx.request.files.file;
+		await fileLib.saveFile(file);
 
 		ctx.body = {
 			code: 0,
+			data: "http://localhost:5010/upload_dir/" + file.name,
 		};
 	} catch (error) {
 		console.log("error", error);

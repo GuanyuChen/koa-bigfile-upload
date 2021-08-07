@@ -106,3 +106,5 @@ dist
 .history
 
 upload_dir
+
+static/upload_dir
